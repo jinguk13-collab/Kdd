@@ -99,8 +99,18 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg h-[60vh] flex items-center justify-center text-white text-center">
-        <div class="max-w-4xl mx-auto px-4">
+    <section class="relative h-[60vh] flex items-center justify-center text-white text-center overflow-hidden">
+        <!-- Background Video -->
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="videos/hero-video.mp4" type="video/mp4">
+            <!-- Fallback for browsers that don't support video -->
+        </video>
+        
+        <!-- Video Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-20 max-w-4xl mx-auto px-4">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 Liburan Seru Bareng<br>
                 <span class="text-yellow-400">Konco Dolan Jogja</span>
@@ -126,14 +136,16 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Paket 1 Hari -->
+                <!-- Paket Wisata Jogja 1 Hari -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <img src="images/paket1hari.jpg" alt="Paket 1 Hari" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 1 Hari</h3>
-                        <p class="text-gray-600 mb-4">Wisata singkat tapi berkesan, cocok untuk weekend getaway</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%201%20Hari" 
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket Wisata Jogja 1 Hari</h3>
+                        <p class="text-gray-600 mb-2">• Candi Borobudur</p>
+                        <p class="text-gray-600 mb-2">• Candi Prambanan</p>
+                        <p class="text-gray-600 mb-4">• Malioboro Street</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Rp 350.000/orang</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Wisata%20Jogja%201%20Hari" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
@@ -141,14 +153,17 @@
                     </div>
                 </div>
 
-                <!-- Paket 2 Hari -->
+                <!-- Paket Wisata Jogja 2 Hari 1 Malam -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <img src="images/paket2hari.jpg" alt="Paket 2 Hari" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 2 Hari</h3>
-                        <p class="text-gray-600 mb-4">Eksplorasi lebih dalam dengan menginap 1 malam</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%202%20Hari" 
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 2 Hari 1 Malam</h3>
+                        <p class="text-gray-600 mb-2">• Candi Borobudur & Sunrise</p>
+                        <p class="text-gray-600 mb-2">• Candi Prambanan</p>
+                        <p class="text-gray-600 mb-2">• Keraton & Taman Sari</p>
+                        <p class="text-gray-600 mb-4">• Hotel + Breakfast</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Rp 650.000/orang</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%202%20Hari%201%20Malam" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
@@ -156,14 +171,17 @@
                     </div>
                 </div>
 
-                <!-- Paket 3 Hari -->
+                <!-- Paket Wisata Jogja 3 Hari 2 Malam -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <img src="images/paket3hari.jpg" alt="Paket 3 Hari" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 3 Hari</h3>
-                        <p class="text-gray-600 mb-4">Liburan santai dengan berbagai destinasi menarik</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%203%20Hari" 
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 3 Hari 2 Malam</h3>
+                        <p class="text-gray-600 mb-2">• Borobudur & Prambanan</p>
+                        <p class="text-gray-600 mb-2">• Pantai Parangtritis</p>
+                        <p class="text-gray-600 mb-2">• Goa Jomblang</p>
+                        <p class="text-gray-600 mb-4">• Hotel + All Meals</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Rp 950.000/orang</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%203%20Hari%202%20Malam" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
@@ -171,14 +189,17 @@
                     </div>
                 </div>
 
-                <!-- Paket 4 Hari -->
+                <!-- Paket Wisata Jogja 4 Hari 3 Malam -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <img src="images/paket4hari.jpg" alt="Paket 4 Hari" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 4 Hari</h3>
-                        <p class="text-gray-600 mb-4">Paket lengkap untuk liburan yang tak terlupakan</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%204%20Hari" 
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 4 Hari 3 Malam</h3>
+                        <p class="text-gray-600 mb-2">• All Temples Tour</p>
+                        <p class="text-gray-600 mb-2">• Pantai Indrayanti</p>
+                        <p class="text-gray-600 mb-2">• Kalibiru & Pinus Pengger</p>
+                        <p class="text-gray-600 mb-4">• Hotel + All Facilities</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Rp 1.250.000/orang</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%204%20Hari%203%20Malam" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
@@ -186,14 +207,16 @@
                     </div>
                 </div>
 
-                <!-- Private Trip -->
+                <!-- Private Trip Jogja -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <img src="images/private.jpg" alt="Private Trip" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Private Trip</h3>
-                        <p class="text-gray-600 mb-4">Wisata eksklusif dengan layanan personal</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Private%20Trip" 
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Private Trip Jogja</h3>
+                        <p class="text-gray-600 mb-2">• Flexible Itinerary</p>
+                        <p class="text-gray-600 mb-2">• Private Car & Driver</p>
+                        <p class="text-gray-600 mb-4">• Personal Guide</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Mulai Rp 500.000</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Private%20Trip%20Jogja" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
@@ -201,14 +224,16 @@
                     </div>
                 </div>
 
-                <!-- Ziarah -->
+                <!-- Paket Ziarah Wali Songo -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <img src="images/ziarah.jpg" alt="Paket Ziarah" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket Ziarah</h3>
-                        <p class="text-gray-600 mb-4">Wisata religi ke makam-makam bersejarah</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Ziarah" 
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket Ziarah Wali Songo</h3>
+                        <p class="text-gray-600 mb-2">• Makam Sunan Kalijaga</p>
+                        <p class="text-gray-600 mb-2">• Makam Imogiri</p>
+                        <p class="text-gray-600 mb-4">• Masjid Gedhe Kauman</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Rp 400.000/orang</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Ziarah%20Wali%20Songo" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
@@ -216,14 +241,16 @@
                     </div>
                 </div>
 
-                <!-- Outbound -->
+                <!-- Company Outbound -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <img src="images/outbond.jpg" alt="Outbound" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Outbound</h3>
-                        <p class="text-gray-600 mb-4">Team building dan aktivitas seru untuk perusahaan</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Outbound" 
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Company Outbound</h3>
+                        <p class="text-gray-600 mb-2">• Team Building Games</p>
+                        <p class="text-gray-600 mb-2">• Meeting Package</p>
+                        <p class="text-gray-600 mb-4">• Lunch & Snack</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Rp 300.000/orang</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Company%20Outbound" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
@@ -236,8 +263,10 @@
                     <img src="images/galery1.jpg" alt="Family Gathering" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Family Gathering</h3>
-                        <p class="text-gray-600 mb-4">Reuni keluarga dengan suasana yang menyenangkan</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <p class="text-gray-600 mb-2">• Family Fun Activities</p>
+                        <p class="text-gray-600 mb-2">• Group Photo Session</p>
+                        <p class="text-gray-600 mb-4">• Catering & Venue</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Rp 250.000/orang</p>
                         <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Family%20Gathering" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
@@ -246,14 +275,16 @@
                     </div>
                 </div>
 
-                <!-- Sewa Mobil -->
+                <!-- Sewa Mobil + Driver -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <img src="images/galery1.jpg" alt="Sewa Mobil" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sewa Mobil</h3>
-                        <p class="text-gray-600 mb-4">Rental mobil dengan driver berpengalaman</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Sewa%20Mobil" 
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sewa Mobil + Driver</h3>
+                        <p class="text-gray-600 mb-2">• Avanza/Xenia (7 seat)</p>
+                        <p class="text-gray-600 mb-2">• Innova (8 seat)</p>
+                        <p class="text-gray-600 mb-4">• Hiace (16 seat)</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Rp 450.000/hari</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Sewa%20Mobil%20+%20Driver" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
@@ -261,14 +292,16 @@
                     </div>
                 </div>
 
-                <!-- Studi Tour -->
+                <!-- Studi Tour Edukatif -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <img src="images/studi-tour.jpg" alt="Studi Tour" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Studi Tour</h3>
-                        <p class="text-gray-600 mb-4">Wisata edukatif untuk pelajar dan mahasiswa</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Studi%20Tour" 
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Studi Tour Edukatif</h3>
+                        <p class="text-gray-600 mb-2">• Museum & Candi</p>
+                        <p class="text-gray-600 mb-2">• Keraton Yogyakarta</p>
+                        <p class="text-gray-600 mb-4">• Batik & Kerajinan</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Rp 200.000/siswa</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Studi%20Tour%20Edukatif" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
@@ -276,14 +309,16 @@
                     </div>
                 </div>
 
-                <!-- Honeymoon -->
+                <!-- Honeymoon Package -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <img src="images/honeymoon.jpg" alt="Honeymoon" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Honeymoon</h3>
-                        <p class="text-gray-600 mb-4">Paket romantis untuk pasangan baru menikah</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Honeymoon" 
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Honeymoon Package</h3>
+                        <p class="text-gray-600 mb-2">• Romantic Dinner</p>
+                        <p class="text-gray-600 mb-2">• Couple Photo Session</p>
+                        <p class="text-gray-600 mb-4">• Luxury Hotel Stay</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Rp 1.500.000/couple</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Honeymoon%20Package" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
@@ -296,12 +331,14 @@
                     <img src="images/galery1.jpg" alt="Custom Package" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Custom Package</h3>
-                        <p class="text-gray-600 mb-4">Buat paket wisata sesuai keinginan Anda</p>
-                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membuat%20Custom%20Package" 
+                        <p class="text-gray-600 mb-2">• Flexible Destination</p>
+                        <p class="text-gray-600 mb-2">• Custom Duration</p>
+                        <p class="text-gray-600 mb-4">• Tailored Experience</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Konsultasi Gratis</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20konsultasi%20Custom%20Package" 
                            target="_blank" rel="noopener noreferrer"
                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
-                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                            <i class="fab fa-whatsapp mr-2"></i>Konsultasi Gratis
                         </a>
                     </div>
                 </div>
@@ -583,5 +620,5 @@
             observer.observe(card);
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9851558892b8aedc',t:'MTc1ODg3NDc0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98516cd2f68381d7',t:'MTc1ODg3NTY5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
