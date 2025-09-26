@@ -1,133 +1,203 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Konco Dolan Jogja</title>
+  <title>Konco Dolan Jogja - Private Trip & Tour Profesional</title>
+  
+  <meta name="description" content="Konco Dolan Jogja menyediakan layanan private trip, family gathering, honeymoon, dan company outbound di Yogyakarta dan sekitarnya. Nikmati liburan seru dan berkesan bersama kami." />
+  <meta name="keywords" content="paket wisata jogja, private trip jogja, tour jogja, sewa mobil jogja, honeymoon jogja, outbound jogja" />
+  <meta property="og:title" content="Konco Dolan Jogja - Private Trip & Tour Profesional" />
+  <meta property="og:description" content="Liburan seru di Jogja? Percayakan pada Konco Dolan Jogja untuk pengalaman tak terlupakan." />
+  <meta property="og:image" content="paket1.jpg" /> <meta property="og:url" content="https://www.urlwebsiteanda.com" /> <meta property="og:type" content="website" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 antialiased">
 
-  <!-- Hero dengan Video Background -->
   <header class="relative h-screen overflow-hidden">
     <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
       <source src="hero-video.mp4" type="video/mp4" />
-      Browser-mu tidak mendukung video.
+      Browser Anda tidak mendukung tag video.
     </video>
-    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 bg-black/60"></div>
 
-    <!-- Navbar -->
-    <nav class="absolute top-0 left-0 w-full z-20 flex justify-between items-center px-6 py-4">
-      <h1 class="text-2xl font-bold text-white">Konco Dolan Jogja</h1>
-      <ul class="hidden md:flex gap-6 text-white">
-        <li><a href="#paket" class="hover:text-yellow-300">Paket</a></li>
-        <li><a href="#layanan" class="hover:text-yellow-300">Layanan</a></li>
-        <li><a href="#galeri" class="hover:text-yellow-300">Galeri</a></li>
-        <li><a href="#kontak" class="hover:text-yellow-300">Kontak</a></li>
-      </ul>
-      <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold">WhatsApp</a>
+    <nav class="absolute top-0 left-0 w-full z-20 bg-black/20 backdrop-blur-sm">
+      <div class="container mx-auto flex justify-between items-center px-6 py-4">
+        <a href="#" class="text-2xl font-bold text-white">Konco Dolan Jogja</a>
+        
+        <ul class="hidden md:flex items-center gap-8 text-white">
+          <li><a href="#paket" class="hover:text-yellow-300 transition-colors duration-300">Paket</a></li>
+          <li><a href="#layanan" class="hover:text-yellow-300 transition-colors duration-300">Layanan</a></li>
+          <li><a href="#galeri" class="hover:text-yellow-300 transition-colors duration-300">Galeri</a></li>
+          <li><a href="#kontak" class="hover:text-yellow-300 transition-colors duration-300">Kontak</a></li>
+        </ul>
+        
+        <a href="https://wa.me/6282242023892" target="_blank" class="hidden md:inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-semibold transition-colors duration-300">
+          WhatsApp
+        </a>
+
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+      
+      <div id="mobile-menu" class="hidden md:hidden">
+          <ul class="flex flex-col items-center py-4 space-y-4 bg-gray-900/80 text-white">
+              <li><a href="#paket" class="hover:text-yellow-300">Paket</a></li>
+              <li><a href="#layanan" class="hover:text-yellow-300">Layanan</a></li>
+              <li><a href="#galeri" class="hover:text-yellow-300">Galeri</a></li>
+              <li><a href="#kontak" class="hover:text-yellow-300">Kontak</a></li>
+              <li>
+                  <a href="https://wa.me/6282242023892" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-semibold transition-colors duration-300">
+                    WhatsApp
+                  </a>
+              </li>
+          </ul>
+      </div>
     </nav>
 
-    <!-- Hero Text -->
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-      <h2 class="text-4xl md:text-6xl font-bold text-white mb-4">Liburan Seru Bareng Konco Dolan Jogja</h2>
-      <p class="text-lg md:text-xl text-gray-200 mb-6">Private Trip • Family Gathering • Honeymoon • Company Outbound</p>
-      <div class="flex gap-4">
-        <a href="https://wa.me/6282242023892" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-full transition">Pesan Sekarang</a>
-        <a href="#paket" class="bg-transparent border border-white hover:border-yellow-300 text-white font-semibold px-6 py-3 rounded-full transition">Lihat Paket</a>
+      <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight shadow-text">Liburan Seru Bareng Konco Dolan Jogja</h2>
+      <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">Private Trip • Family Gathering • Honeymoon • Company Outbound</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="https://wa.me/6282242023892" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-3 rounded-full transition-transform duration-300 hover:scale-105">Pesan Sekarang</a>
+        <a href="#paket" class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold px-8 py-3 rounded-full transition-all duration-300">Lihat Paket</a>
       </div>
     </div>
   </header>
 
-  <!-- Paket Wisata -->
-  <section id="paket" class="py-16 px-6 bg-white">
-    <h3 class="text-3xl font-bold text-center mb-12">Paket Wisata</h3>
-    <div class="grid md:grid-cols-4 gap-8">
-      
-      <!-- Paket Harian -->
-      <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-        <img src="paket1.jpg" alt="Paket Harian Jogja" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Paket Wisata Harian Jogja</h4>
-          <p class="text-gray-600 mb-4">Nikmati liburan sehari penuh dengan destinasi terbaik di Jogja.</p>
-          <p class="font-bold text-yellow-600 mb-4">Mulai Rp 350.000 / orang</p>
-          <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
+  <main>
+    <section id="paket" class="py-20 px-6 bg-white">
+      <div class="container mx-auto">
+        <h3 class="text-3xl font-bold text-center mb-4">Pilihan Paket Wisata</h3>
+        <p class="text-center text-gray-600 mb-12 max-w-xl mx-auto">Kami menyediakan berbagai paket fleksibel yang bisa disesuaikan dengan kebutuhan liburan Anda.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+            <img src="paket1.jpg" alt="Wisatawan di Candi Prambanan" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col">
+              <h4 class="text-xl font-semibold mb-2">Paket Wisata Harian Jogja</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Nikmati liburan sehari penuh dengan destinasi terbaik di Jogja.</p>
+              <p class="font-bold text-yellow-600 mb-4 text-lg">Mulai Rp 350.000 / orang</p>
+              <a href="https://wa.me/6282242023892?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Wisata%20Harian." target="_blank" class="mt-auto text-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300">Info Detail</a>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+            <img src="paket4d3n.jpg" alt="Pemandangan Pantai di Gunungkidul" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col">
+              <h4 class="text-xl font-semibold mb-2">Paket 4 Hari 3 Malam</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Jelajahi Jogja lebih puas dengan itinerary lengkap 4H3M.</p>
+              <p class="font-bold text-yellow-600 mb-4 text-lg">Mulai Rp 2.500.000 / paket</p>
+              <a href="https://wa.me/6282242023892?text=Halo,%20saya%20tertarik%20dengan%20Paket%204H3M." target="_blank" class="mt-auto text-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300">Info Detail</a>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+            <img src="paket2.jpg" alt="Pemandangan Gunung Bromo" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col">
+              <h4 class="text-xl font-semibold mb-2">Paket Wisata Luar Kota</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Bromo, Bali, Bandung, Lombok, Malang, Pacitan, dan lainnya.</p>
+              <p class="font-bold text-yellow-600 mb-4 text-lg">Harga Menyesuaikan</p>
+              <a href="https://wa.me/6282242023892?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Luar%20Kota." target="_blank" class="mt-auto text-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300">Tanya Harga</a>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+            <img src="paket3.jpg" alt="Pasangan Honeymoon di Villa" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col">
+              <h4 class="text-xl font-semibold mb-2">Paket Honeymoon</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Ciptakan momen romantis dan berkesan untuk hari spesial Anda.</p>
+              <p class="font-bold text-yellow-600 mb-4 text-lg">Harga Menyesuaikan</p>
+              <a href="https://wa.me/6282242023892?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Honeymoon." target="_blank" class="mt-auto text-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300">Tanya Harga</a>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Paket 4H3M -->
-      <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-        <img src="paket4d3n.jpg" alt="Paket 4 Hari 3 Malam" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Paket 4 Hari 3 Malam</h4>
-          <p class="text-gray-600 mb-4">Jelajahi Jogja lebih puas dengan itinerary lengkap 4H3M.</p>
-          <p class="font-bold text-yellow-600 mb-4">Mulai Rp 2.500.000 / paket</p>
-          <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
+    <section id="layanan" class="py-20 px-6 bg-gray-100">
+      <div class="container mx-auto">
+        <h3 class="text-3xl font-bold text-center mb-4">Layanan Lainnya</h3>
+        <p class="text-center text-gray-600 mb-12 max-w-xl mx-auto">Selain paket wisata, kami juga melayani berbagai kebutuhan perjalanan dan acara Anda.</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+          <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Ziarah Walisongo</h4></div>
+          <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Company Outbond</h4></div>
+          <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Family Gathering</h4></div>
+          <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Sewa Mobil + Driver</h4></div>
+          <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Study Tour</h4></div>
+          <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Honeymoon</h4></div>
         </div>
       </div>
+    </section>
 
-      <!-- Paket Luar Kota -->
-      <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-        <img src="paket2.jpg" alt="Paket Luar Kota" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Paket Wisata Luar Kota</h4>
-          <p class="text-gray-600 mb-4">Bromo, Bali, Bandung, Lombok, Malang, Pacitan, dan lainnya.</p>
-          <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
-          <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
+    <section id="galeri" class="py-20 px-6 bg-white">
+      <div class="container mx-auto">
+        <h3 class="text-3xl font-bold text-center mb-12">Galeri Perjalanan Kami</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <img src="galeri1.jpg" class="w-full h-72 object-cover rounded-xl shadow-md" alt="Galeri perjalanan Konco Dolan Jogja 1">
+          <img src="galeri2.jpg" class="w-full h-72 object-cover rounded-xl shadow-md" alt="Galeri perjalanan Konco Dolan Jogja 2">
+          <img src="galeri3.jpg" class="w-full h-72 object-cover rounded-xl shadow-md" alt="Galeri perjalanan Konco Dolan Jogja 3">
         </div>
       </div>
+    </section>
 
-      <!-- Paket Honeymoon -->
-      <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-        <img src="paket3.jpg" alt="Paket Honeymoon" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Paket Honeymoon</h4>
-          <p class="text-gray-600 mb-4">Romantis dan berkesan untuk momen spesialmu.</p>
-          <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
-          <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
+    <section id="kontak" class="py-20 px-6 bg-gray-100">
+      <div class="container mx-auto text-center">
+        <h3 class="text-3xl font-bold text-center mb-8">Hubungi Kami</h3>
+        <p class="text-gray-600 mb-8 max-w-lg mx-auto">Punya pertanyaan atau ingin kustomisasi paket? Jangan ragu untuk menghubungi kami.</p>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-left">
+          
+          <div class="flex items-start gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            <div>
+              <h4 class="font-semibold">Alamat</h4>
+              <p>Gg. Perjuangan No.602, Pandeyan, Umbulharjo,<br>Kota Yogyakarta, 55161</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            <div>
+              <h4 class="font-semibold">WhatsApp</h4>
+              <p><a href="https://wa.me/6282242023892" target="_blank" class="text-green-600 hover:underline">+62 822-4202-3892</a></p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" stroke-width="2"></path></svg>
+            <div>
+              <h4 class="font-semibold">Instagram</h4>
+              <p><a href="https://www.instagram.com/paketwisatajogja.id" target="_blank" class="text-blue-600 hover:underline">@paketwisatajogja.id</a></p>
+            </div>
+          </div>
+          
         </div>
       </div>
+    </section>
+  </main>
 
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Konco Dolan Jogja. All Rights Reserved.</p>
     </div>
-  </section>
-
-  <!-- Layanan Tambahan -->
-  <section id="layanan" class="py-16 px-6 bg-gray-100">
-    <h3 class="text-3xl font-bold text-center mb-12">Layanan Lainnya</h3>
-    <div class="grid md:grid-cols-3 gap-8 text-center">
-      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Paket Ziarah Walisongo</h4></div>
-      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Company Outbond</h4></div>
-      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Family Gathering</h4></div>
-      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Sewa Mobil + Driver</h4></div>
-      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Study Tour</h4></div>
-      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Honeymoon Package</h4></div>
-    </div>
-  </section>
-
-  <!-- Galeri -->
-  <section id="galeri" class="py-16 px-6 bg-white">
-    <h3 class="text-3xl font-bold text-center mb-12">Galeri Perjalanan</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-      <img src="galeri1.jpg" class="w-full h-64 object-cover rounded-xl shadow-md" alt="Galeri 1">
-      <img src="galeri2.jpg" class="w-full h-64 object-cover rounded-xl shadow-md" alt="Galeri 2">
-      <img src="galeri3.jpg" class="w-full h-64 object-cover rounded-xl shadow-md" alt="Galeri 3">
-    </div>
-  </section>
-
-  <!-- Kontak -->
-  <section id="kontak" class="py-16 px-6 bg-gray-100">
-    <h3 class="text-3xl font-bold text-center mb-8">Kontak Kami</h3>
-    <div class="text-center">
-      <p class="mb-2">📍 Gg. Perjuangan No.602, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, 55161</p>
-      <p class="mb-2">📞 <a href="https://wa.me/6282242023892" class="text-green-600 font-semibold">+62 822-4202-3892</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/paketwisatajogja.id" target="_blank" class="text-blue-600">@paketwisatajogja.id</a></p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6 text-center">
-    <p>&copy; 2025 Konco Dolan Jogja. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
