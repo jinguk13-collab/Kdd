@@ -1,169 +1,587 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Konco Dolan Jogja</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konco Dolan Jogja - Liburan Seru di Yogyakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .navbar-scroll {
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            text-decoration: none;
+            color: #FFF;
+            background-color: #1ebe57;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="font-sans">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <i class="fab fa-whatsapp" style="margin-top:16px"></i>
+    </a>
 
-<!-- Hero Section -->
-<section class="relative h-[70vh] md:h-[80vh]">
-  <img src="images/hero.jpg" class="absolute w-full h-full object-cover" alt="Hero">
-  <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-4">
-    <h1 class="text-3xl md:text-5xl font-bold mb-4">Liburan Seru Bareng Konco Dolan Jogja</h1>
-    <p class="text-lg md:text-xl mb-6">Private Trip • Family Gathering • Honeymoon • Company Outbound</p>
-    <a href="https://wa.me/6282242023892" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-full">Pesan Sekarang</a>
-  </div>
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-lg navbar-scroll">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-blue-600">Konco Dolan Jogja</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#paket" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Paket</a>
+                        <a href="#layanan" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Layanan</a>
+                        <a href="#galeri" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Galeri</a>
+                        <a href="#kontak" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Kontak</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-sm">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#paket" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Paket</a>
+                <a href="#layanan" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Layanan</a>
+                <a href="#galeri" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Galeri</a>
+                <a href="#kontak" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Kontak</a>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="absolute top-0 left-0 w-full z-20 flex justify-between items-center px-6 py-4">
-    <h2 class="text-2xl font-bold text-white">Konco Dolan Jogja</h2>
-    <ul class="hidden md:flex gap-6 text-white">
-      <li><a href="#paket" class="hover:text-yellow-300">Paket</a></li>
-      <li><a href="#layanan" class="hover:text-yellow-300">Layanan</a></li>
-      <li><a href="#galeri" class="hover:text-yellow-300">Galeri</a></li>
-      <li><a href="#kontak" class="hover:text-yellow-300">Kontak</a></li>
-    </ul>
-    <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold">WhatsApp</a>
-  </nav>
-</section>
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Liburan Seru Bareng<br>
+                <span class="text-yellow-400">Konco Dolan Jogja</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200">
+                Private Trip • Family Gathering • Honeymoon • Company Outbound
+            </p>
+            <a href="https://wa.me/6281234567890?text=Halo%20Konco%20Dolan%20Jogja,%20saya%20ingin%20booking%20paket%20wisata" 
+               target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+                <i class="fab fa-whatsapp mr-2"></i>
+                Booking Sekarang
+            </a>
+        </div>
+    </section>
 
-<!-- Paket Wisata -->
-<section id="paket" class="py-16 px-6 bg-white">
-  <h3 class="text-3xl font-bold text-center mb-12">Paket Wisata</h3>
-  <div class="grid md:grid-cols-4 gap-8">
+    <!-- Paket Wisata Section -->
+    <section id="paket" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Paket Wisata Terbaik</h2>
+                <p class="text-xl text-gray-600">Pilih paket wisata sesuai kebutuhan dan budget Anda</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Paket 1 Hari -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/paket1hari.jpg" alt="Paket 1 Hari" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 1 Hari</h3>
+                        <p class="text-gray-600 mb-4">Wisata singkat tapi berkesan, cocok untuk weekend getaway</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%201%20Hari" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-      <img src="images/paket1hari.jpg" alt="Paket Harian Jogja" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Paket Wisata Harian Jogja</h4>
-        <p class="text-gray-600 mb-4">Nikmati liburan sehari penuh dengan destinasi terbaik di Jogja.</p>
-        <p class="font-bold text-yellow-600 mb-4">Mulai Rp 350.000 / orang</p>
-        <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
-      </div>
-    </div>
+                <!-- Paket 2 Hari -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/paket2hari.jpg" alt="Paket 2 Hari" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 2 Hari</h3>
+                        <p class="text-gray-600 mb-4">Eksplorasi lebih dalam dengan menginap 1 malam</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%202%20Hari" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-      <img src="images/paket4hari.jpg" alt="Paket 4 Hari 3 Malam" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Paket 4 Hari 3 Malam</h4>
-        <p class="text-gray-600 mb-4">Jelajahi Jogja lebih puas dengan itinerary lengkap 4H3M.</p>
-        <p class="font-bold text-yellow-600 mb-4">Mulai Rp 2.500.000 / paket</p>
-        <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
-      </div>
-    </div>
+                <!-- Paket 3 Hari -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/paket3hari.jpg" alt="Paket 3 Hari" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 3 Hari</h3>
+                        <p class="text-gray-600 mb-4">Liburan santai dengan berbagai destinasi menarik</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%203%20Hari" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-      <img src="images/private.jpg" alt="Paket Private/Company" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Paket Private/Company</h4>
-        <p class="text-gray-600 mb-4">Bali, Bromo, Semarang, Malang, Bandung, Pacitan, Lombok, dan lainnya.</p>
-        <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
-        <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
-      </div>
-    </div>
+                <!-- Paket 4 Hari -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/paket4hari.jpg" alt="Paket 4 Hari" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket 4 Hari</h3>
+                        <p class="text-gray-600 mb-4">Paket lengkap untuk liburan yang tak terlupakan</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%204%20Hari" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-      <img src="images/ziarah.jpg" alt="Paket Ziarah Walisongo" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Paket Ziarah Walisongo</h4>
-        <p class="text-gray-600 mb-4">Wisata religi mengunjungi makam Walisongo di Jawa.</p>
-        <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
-        <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
-      </div>
-    </div>
+                <!-- Private Trip -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/private.jpg" alt="Private Trip" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Private Trip</h3>
+                        <p class="text-gray-600 mb-4">Wisata eksklusif dengan layanan personal</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Private%20Trip" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-    <!-- Tambahan Paket Lain -->
-    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-      <img src="images/outbound.jpg" alt="Company Outbound" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Company Outbound</h4>
-        <p class="text-gray-600 mb-4">Program outbound seru untuk perusahaan.</p>
-        <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
-        <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
-      </div>
-    </div>
+                <!-- Ziarah -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/ziarah.jpg" alt="Paket Ziarah" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paket Ziarah</h3>
+                        <p class="text-gray-600 mb-4">Wisata religi ke makam-makam bersejarah</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Ziarah" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-      <img src="images/family.jpg" alt="Family Gathering" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Family Gathering</h4>
-        <p class="text-gray-600 mb-4">Liburan keluarga seru dan menyenangkan.</p>
-        <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
-        <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
-      </div>
-    </div>
+                <!-- Outbound -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/outbond.jpg" alt="Outbound" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Outbound</h3>
+                        <p class="text-gray-600 mb-4">Team building dan aktivitas seru untuk perusahaan</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Outbound" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-      <img src="images/sewamobil.jpg" alt="Sewa Mobil + Driver" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Sewa Mobil + Driver</h4>
-        <p class="text-gray-600 mb-4">Sewa mobil lengkap dengan driver untuk perjalanan nyaman.</p>
-        <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
-        <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
-      </div>
-    </div>
+                <!-- Family Gathering -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/galery1.jpg" alt="Family Gathering" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Family Gathering</h3>
+                        <p class="text-gray-600 mb-4">Reuni keluarga dengan suasana yang menyenangkan</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Family%20Gathering" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-      <img src="images/studytour.jpg" alt="Study Tour" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Study Tour</h4>
-        <p class="text-gray-600 mb-4">Wisata edukatif untuk sekolah atau organisasi.</p>
-        <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
-        <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
-      </div>
-    </div>
+                <!-- Sewa Mobil -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/galery1.jpg" alt="Sewa Mobil" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sewa Mobil</h3>
+                        <p class="text-gray-600 mb-4">Rental mobil dengan driver berpengalaman</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Sewa%20Mobil" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-      <img src="images/honeymoon.jpg" alt="Honeymoon Package" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Honeymoon Package</h4>
-        <p class="text-gray-600 mb-4">Romantis dan berkesan untuk momen spesialmu.</p>
-        <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
-        <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
-      </div>
-    </div>
+                <!-- Studi Tour -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/studi-tour.jpg" alt="Studi Tour" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Studi Tour</h3>
+                        <p class="text-gray-600 mb-4">Wisata edukatif untuk pelajar dan mahasiswa</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Studi%20Tour" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-  </div>
-</section>
+                <!-- Honeymoon -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/honeymoon.jpg" alt="Honeymoon" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Honeymoon</h3>
+                        <p class="text-gray-600 mb-4">Paket romantis untuk pasangan baru menikah</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Honeymoon" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
 
-<!-- Kontak & Alamat -->
-<section id="kontak" class="py-16 px-6 bg-gray-100">
-  <h3 class="text-3xl font-bold text-center mb-12">Kontak & Alamat</h3>
-  <div class="md:flex gap-12">
-    <div class="md:w-1/2 mb-8 md:mb-0">
-      <h4 class="text-xl font-semibold mb-2">Alamat</h4>
-      <p>Jl. Perjuangan No.602, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, DIY 55161</p>
-      <h4 class="text-xl font-semibold mt-4 mb-2">WhatsApp</h4>
-      <a href="https://wa.me/6282242023892" class="text-green-500 font-bold">+62 822-4202-3892</a>
-    </div>
-    <div class="md:w-1/2">
-      <iframe class="w-full h-64 md:h-full rounded-lg" 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.092854014378!2d110.36685891477587!3d-7.801967094409554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787efef2b87%3A0x38f0c6f29f7c96d0!2sJl.%20Perjuangan%20No.602%2C%20Pandeyan%2C%20Kec.%20Umbulharjo%2C%20Kota%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta%2055161!5e0!3m2!1sid!2sid!4v1695738365456!5m2!1sid!2sid" 
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</section>
+                <!-- Custom Package -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="images/galery1.jpg" alt="Custom Package" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Custom Package</h3>
+                        <p class="text-gray-600 mb-4">Buat paket wisata sesuai keinginan Anda</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">Harga menyesuaikan</p>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membuat%20Custom%20Package" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors inline-block text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-6 text-center">
-  <p>&copy; 2025 Konco Dolan Jogja. All Rights Reserved.</p>
-</footer>
+    <!-- Layanan Section -->
+    <section id="layanan" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Layanan Terbaik Kami</h2>
+                <p class="text-xl text-gray-600">Mengapa memilih Konco Dolan Jogja?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-car text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Transportasi Nyaman</h3>
+                    <p class="text-gray-600">Mobil terawat dengan AC dan driver berpengalaman</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marked-alt text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Guide Lokal</h3>
+                    <p class="text-gray-600">Pemandu wisata yang mengenal seluk beluk Jogja</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Fleksibel</h3>
+                    <p class="text-gray-600">Jadwal dan itinerary dapat disesuaikan</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Pelayanan Ramah</h3>
+                    <p class="text-gray-600">Tim yang siap membantu 24/7</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    pagination: { el: ".swiper-pagination", clickable: true },
-    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    autoplay: { delay: 4000, disableOnInteraction: false },
-  });
-</script>
+    <!-- Galeri Section -->
+    <section id="galeri" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Galeri Perjalanan</h2>
+                <p class="text-xl text-gray-600">Momen indah bersama Konco Dolan Jogja</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="relative overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="images/galery1.jpg" alt="Galeri 1" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">Wisata Keluarga</p>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="images/honeymoon.jpg" alt="Honeymoon" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">Paket Honeymoon</p>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="images/outbond.jpg" alt="Outbound" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">Company Outbound</p>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="images/studi-tour.jpg" alt="Studi Tour" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">Studi Tour</p>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="images/ziarah.jpg" alt="Ziarah" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">Wisata Ziarah</p>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="images/private.jpg" alt="Private Trip" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">Private Trip</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
-        </html>
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Hubungi Kami</h2>
+                <p class="text-xl text-gray-600">Siap melayani perjalanan wisata Anda</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Alamat</h3>
+                                <p class="text-gray-600">Gg. Perjuangan No.602, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, DIY 55161</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fab fa-whatsapp text-green-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">WhatsApp</h3>
+                                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:text-green-700">+62 812-3456-7890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-red-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Email</h3>
+                                <a href="mailto:info@koncodolanjogja.com" class="text-red-600 hover:text-red-700">info@koncodolanjogja.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fab fa-instagram text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Instagram</h3>
+                                <a href="https://instagram.com/koncodolanjogja" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-700">@koncodolanjogja</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-gray-100 rounded-xl overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.8267!2d110.3695!3d-7.8014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sGg.%20Perjuangan%20No.602%2C%20Pandeyan%2C%20Kec.%20Umbulharjo%2C%20Kota%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta%2055161!5e0!3m2!1sen!2sid!4v1234567890"
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Konco Dolan Jogja</h3>
+                    <p class="text-gray-400 mb-4">Partner terpercaya untuk liburan seru di Yogyakarta. Kami siap mengantarkan Anda ke destinasi impian dengan pelayanan terbaik.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/koncodolanjogja" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://facebook.com/koncodolanjogja" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Paket Populer</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#paket" class="hover:text-white transition-colors">Paket 2 Hari 1 Malam</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Private Trip</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Honeymoon Package</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Company Outbound</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Kontak</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Gg. Perjuangan No.602, Pandeyan, Umbulharjo, Yogyakarta</p>
+                        <p><i class="fab fa-whatsapp mr-2"></i>+62 812-3456-7890</p>
+                        <p><i class="fas fa-envelope mr-2"></i>info@koncodolanjogja.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Konco Dolan Jogja. All rights reserved. Made with ❤️ for your amazing journey.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-white/95');
+                navbar.classList.remove('bg-white/90');
+            } else {
+                navbar.classList.add('bg-white/90');
+                navbar.classList.remove('bg-white/95');
+            }
+        });
+
+        // Add animation to cards when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'985146cb74e2fd67',t:'MTc1ODg3NDEzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
