@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogja Tour Agency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SwiperJS untuk slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body class="font-sans text-gray-800 scroll-smooth">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="font-bold text-xl text-blue-700">Jogja Tour Agency</h1>
+      <nav class="space-x-6">
+        <a href="#paket" class="hover:text-blue-600">Paket</a>
+        <a href="#kenapa" class="hover:text-blue-600">Kenapa Kami</a>
+        <a href="#testimoni" class="hover:text-blue-600">Testimoni</a>
+        <a href="#booking" class="hover:text-blue-600">Booking</a>
+        <a href="#kontak" class="hover:text-blue-600">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative bg-gray-900 text-white pt-20">
+    <img src="https://source.unsplash.com/1600x800/?yogyakarta" class="w-full h-[500px] object-cover opacity-70">
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Liburan Asyik di Jogja</h2>
+      <p class="mb-6 text-lg">Paket wisata & sewa mobil terpercaya untuk keluarga dan rombongan</p>
+      <a href="https://wa.me/6282242023892" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-full shadow-lg transition">
+        Pesan via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Slider Foto -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">Galeri Wisata</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?borobudur" class="rounded-xl w-full"></div>
+          <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?prambanan" class="rounded-xl w-full"></div>
+          <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?malioboro" class="rounded-xl w-full"></div>
+          <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?merapi" class="rounded-xl w-full"></div>
+        </div>
+        <!-- tombol navigasi -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paket Populer -->
+  <section id="paket" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Paket Populer</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+          <img src="https://source.unsplash.com/400x250/?borobudur" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">2 Hari 1 Malam</h3>
+            <p class="text-gray-600 mb-4">Borobudur, Malioboro, city tour.</p>
+            <p class="font-bold text-yellow-600 mb-4">Rp1.500.000</p>
+            <a href="#booking" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Pesan</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+          <img src="https://source.unsplash.com/400x250/?prambanan" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">3 Hari 2 Malam</h3>
+            <p class="text-gray-600 mb-4">Prambanan, Merapi Lava Tour, kuliner Jogja.</p>
+            <p class="font-bold text-yellow-600 mb-4">Rp2.500.000</p>
+            <a href="#booking" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Pesan</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+          <img src="https://source.unsplash.com/400x250/?car" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Rental Mobil</h3>
+            <p class="text-gray-600 mb-4">Avanza, Innova, Hiace + driver ramah.</p>
+            <p class="font-bold text-yellow-600 mb-4">Mulai Rp400.000/hari</p>
+            <a href="#booking" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Pesan</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Kenapa Pilih Kami -->
+  <section id="kenapa" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">Kenapa Pilih Kami?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-xl shadow-lg">
+          <h3 class="font-bold mb-2">Driver Ramah</h3>
+          <p>Berpengalaman & mengenal Jogja dengan baik.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg">
+          <h3 class="font-bold mb-2">Harga Transparan</h3>
+          <p>Tidak ada biaya tersembunyi.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg">
+          <h3 class="font-bold mb-2">Mobil Nyaman</h3>
+          <p>Kendaraan bersih & terawat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section id="testimoni" class="py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">Testimoni</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <p class="italic">“Pelayanan ramah, mobil bersih, perjalanan nyaman. Mantap!”</p>
+          <p class="mt-4 font-bold">– Andi, Jakarta</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <p class="italic">“Paket wisata lengkap, harga sesuai. Recommended!”</p>
+          <p class="mt-4 font-bold">– Sinta, Surabaya</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking" class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">Form Booking</h2>
+      <form id="bookingForm" class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+        <input type="text" id="nama" placeholder="Nama Lengkap" class="w-full border p-3 rounded">
+        <input type="date" id="tanggal" class="w-full border p-3 rounded">
+        <select id="paket" class="w-full border p-3 rounded">
+          <option value="">Pilih Paket</option>
+          <option>2 Hari 1 Malam</option>
+          <option>3 Hari 2 Malam</option>
+          <option>Rental Mobil</option>
+        </select>
+        <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-lg w-full">Pesan via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Kontak Kami</h2>
+      <p class="mb-4">Alamat: Gg. Perjuangan No.602, Pandeyan, Umbulharjo, Yogyakarta</p>
+      <p class="mb-4">WhatsApp: +62 822-4202-3892</p>
+      <div class="w-full h-72">
+        <iframe src="https://www.google.com/maps?q=Gg.+Perjuangan+No.602,+Pandeyan,+Umbulharjo,+Yogyakarta&output=embed" 
+                width="100%" height="100%" class="rounded-xl shadow"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2025 Jogja Tour Agency. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Script Booking Form -->
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value;
+      const tanggal = document.getElementById("tanggal").value;
+      const paket = document.getElementById("paket").value;
+
+      if(!nama || !tanggal || !paket) {
+        alert("Harap isi semua data booking!");
+        return;
+      }
+
+      const pesan = `Halo, saya ingin booking:\nNama: ${nama}\nTanggal: ${tanggal}\nPaket: ${paket}`;
+      const url = `https://wa.me/6282242023892?text=${encodeURIComponent(pesan)}`;
+      window.open(url, "_blank");
+    });
+
+    // Init Swiper slider
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: { delay: 3000 },
+      pagination: { el: ".swiper-pagination", clickable: true },
+    });
+  </script>
+
+</body>
+</html>
