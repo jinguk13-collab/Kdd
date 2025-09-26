@@ -3,150 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jogja Tour Agency</title>
+  <title>Konco Dolan Jogja</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Hero Section -->
-  <header class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('hero.jpg');">
-    <div class="bg-black bg-opacity-50 p-8 rounded-xl text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Paket Wisata Jogja & Sewa Mobil</h1>
-      <p class="text-lg md:text-xl mb-6">Temukan pengalaman liburan terbaik bersama Jogja Tour Agency</p>
-      <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition">Pesan via WhatsApp</a>
+  <!-- Hero dengan Video Background -->
+  <header class="relative h-screen overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="hero-video.mp4" type="video/mp4" />
+      Browser-mu tidak mendukung video.
+    </video>
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Navbar -->
+    <nav class="absolute top-0 left-0 w-full z-20 flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-white">Konco Dolan Jogja</h1>
+      <ul class="hidden md:flex gap-6 text-white">
+        <li><a href="#paket" class="hover:text-yellow-300">Paket</a></li>
+        <li><a href="#layanan" class="hover:text-yellow-300">Layanan</a></li>
+        <li><a href="#galeri" class="hover:text-yellow-300">Galeri</a></li>
+        <li><a href="#kontak" class="hover:text-yellow-300">Kontak</a></li>
+      </ul>
+      <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold">WhatsApp</a>
+    </nav>
+
+    <!-- Hero Text -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <h2 class="text-4xl md:text-6xl font-bold text-white mb-4">Liburan Seru Bareng Konco Dolan Jogja</h2>
+      <p class="text-lg md:text-xl text-gray-200 mb-6">Private Trip • Family Gathering • Honeymoon • Company Outbound</p>
+      <div class="flex gap-4">
+        <a href="https://wa.me/6282242023892" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-full transition">Pesan Sekarang</a>
+        <a href="#paket" class="bg-transparent border border-white hover:border-yellow-300 text-white font-semibold px-6 py-3 rounded-full transition">Lihat Paket</a>
+      </div>
     </div>
   </header>
 
-  <!-- Paket Populer -->
-  <section class="py-16 px-6 bg-white" id="paket">
-    <h2 class="text-3xl font-bold text-center mb-12">Paket Populer</h2>
-    <div class="grid md:grid-cols-4 gap-6">
+  <!-- Paket Wisata -->
+  <section id="paket" class="py-16 px-6 bg-white">
+    <h3 class="text-3xl font-bold text-center mb-12">Paket Wisata</h3>
+    <div class="grid md:grid-cols-4 gap-8">
       
-      <!-- Paket 1 Hari -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
-        <img src="paket-1hari.jpg" alt="Paket 1 Hari" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-bold mb-2">1 Hari Wisata Jogja</h3>
-          <p class="text-gray-600">City tour Borobudur, Prambanan, Malioboro.</p>
-          <p class="font-semibold mt-2">Mulai Rp 650.000</p>
+      <!-- Paket Harian -->
+      <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
+        <img src="paket1.jpg" alt="Paket Harian Jogja" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-2">Paket Wisata Harian Jogja</h4>
+          <p class="text-gray-600 mb-4">Nikmati liburan sehari penuh dengan destinasi terbaik di Jogja.</p>
+          <p class="font-bold text-yellow-600 mb-4">Mulai Rp 350.000 / orang</p>
+          <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
         </div>
       </div>
 
-      <!-- Paket 2 Hari -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-        <img src="paket-2hari.jpg" alt="Paket 2 Hari" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-bold mb-2">2 Hari 1 Malam</h3>
-          <p class="text-gray-600">Wisata lengkap Jogja dengan penginapan.</p>
-          <p class="font-semibold mt-2">Mulai Rp 1.250.000</p>
+      <!-- Paket 4H3M -->
+      <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
+        <img src="paket4d3n.jpg" alt="Paket 4 Hari 3 Malam" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-2">Paket 4 Hari 3 Malam</h4>
+          <p class="text-gray-600 mb-4">Jelajahi Jogja lebih puas dengan itinerary lengkap 4H3M.</p>
+          <p class="font-bold text-yellow-600 mb-4">Mulai Rp 2.500.000 / paket</p>
+          <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
         </div>
       </div>
 
-      <!-- Paket 3 Hari -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-        <img src="paket-3hari.jpg" alt="Paket 3 Hari" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-bold mb-2">3 Hari 2 Malam</h3>
-          <p class="text-gray-600">Eksplorasi wisata Jogja lebih lama & nyaman.</p>
-          <p class="font-semibold mt-2">Mulai Rp 1.950.000</p>
+      <!-- Paket Luar Kota -->
+      <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
+        <img src="paket2.jpg" alt="Paket Luar Kota" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-2">Paket Wisata Luar Kota</h4>
+          <p class="text-gray-600 mb-4">Bromo, Bali, Bandung, Lombok, Malang, Pacitan, dan lainnya.</p>
+          <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
+          <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
         </div>
       </div>
 
-      <!-- Rental Mobil -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-        <img src="rental.jpg" alt="Rental Mobil" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-bold mb-2">Rental Mobil Harian</h3>
-          <p class="text-gray-600">Sewa mobil + driver ramah & berpengalaman.</p>
-          <p class="font-semibold mt-2">Mulai Rp 450.000</p>
+      <!-- Paket Honeymoon -->
+      <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
+        <img src="paket3.jpg" alt="Paket Honeymoon" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-2">Paket Honeymoon</h4>
+          <p class="text-gray-600 mb-4">Romantis dan berkesan untuk momen spesialmu.</p>
+          <p class="font-bold text-yellow-600 mb-4">Harga Menyesuaikan</p>
+          <a href="https://wa.me/6282242023892" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Pesan</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Paket Lainnya -->
-  <section class="py-16 px-6 bg-gray-100">
-    <h2 class="text-3xl font-bold text-center mb-12">Paket Lainnya</h2>
+  <!-- Layanan Tambahan -->
+  <section id="layanan" class="py-16 px-6 bg-gray-100">
+    <h3 class="text-3xl font-bold text-center mb-12">Layanan Lainnya</h3>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Paket Ziarah Walisongo</h4></div>
+      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Company Outbond</h4></div>
+      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Family Gathering</h4></div>
+      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Sewa Mobil + Driver</h4></div>
+      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Study Tour</h4></div>
+      <div class="bg-white shadow-md p-6 rounded-xl"><h4 class="font-semibold">Honeymoon Package</h4></div>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="galeri" class="py-16 px-6 bg-white">
+    <h3 class="text-3xl font-bold text-center mb-12">Galeri Perjalanan</h3>
     <div class="grid md:grid-cols-3 gap-6">
-      
-      <div class="bg-white p-6 rounded-xl shadow-lg flex items-center gap-4" data-aos="zoom-in">
-        <img src="private.jpg" alt="Private Trip" class="w-16 h-16 object-cover rounded-lg">
-        <div>
-          <h3 class="font-bold">Paket Wisata Private/Company</h3>
-          <p class="text-sm text-gray-600">Bali, Bromo, Semarang, Malang, Bandung, Pacitan, Lombok dll.</p>
-        </div>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-lg flex items-center gap-4" data-aos="zoom-in" data-aos-delay="100">
-        <img src="ziarah.jpg" alt="Ziarah" class="w-16 h-16 object-cover rounded-lg">
-        <div>
-          <h3 class="font-bold">Paket Ziarah Walisongo</h3>
-          <p class="text-sm text-gray-600">Perjalanan religi nyaman & aman.</p>
-        </div>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-lg flex items-center gap-4" data-aos="zoom-in" data-aos-delay="200">
-        <img src="outbond.jpg" alt="Outbond" class="w-16 h-16 object-cover rounded-lg">
-        <div>
-          <h3 class="font-bold">Company Outbond</h3>
-          <p class="text-sm text-gray-600">Team building seru & menyenangkan.</p>
-        </div>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-lg flex items-center gap-4" data-aos="zoom-in">
-        <img src="family.jpg" alt="Family Gathering" class="w-16 h-16 object-cover rounded-lg">
-        <div>
-          <h3 class="font-bold">Family Gathering</h3>
-          <p class="text-sm text-gray-600">Kebersamaan keluarga lebih hangat.</p>
-        </div>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-lg flex items-center gap-4" data-aos="zoom-in" data-aos-delay="100">
-        <img src="driver.jpg" alt="Sewa Mobil" class="w-16 h-16 object-cover rounded-lg">
-        <div>
-          <h3 class="font-bold">Sewa Mobil + Driver</h3>
-          <p class="text-sm text-gray-600">Driver ramah, profesional, berpengalaman.</p>
-        </div>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-lg flex items-center gap-4" data-aos="zoom-in" data-aos-delay="200">
-        <img src="study.jpg" alt="Study Tour" class="w-16 h-16 object-cover rounded-lg">
-        <div>
-          <h3 class="font-bold">Study Tour</h3>
-          <p class="text-sm text-gray-600">Wisata edukasi sekolah & kampus.</p>
-        </div>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-lg flex items-center gap-4" data-aos="zoom-in">
-        <img src="honeymoon.jpg" alt="Honeymoon" class="w-16 h-16 object-cover rounded-lg">
-        <div>
-          <h3 class="font-bold">Honeymoon Package</h3>
-          <p class="text-sm text-gray-600">Liburan romantis pasangan baru.</p>
-        </div>
-      </div>
-
+      <img src="galeri1.jpg" class="w-full h-64 object-cover rounded-xl shadow-md" alt="Galeri 1">
+      <img src="galeri2.jpg" class="w-full h-64 object-cover rounded-xl shadow-md" alt="Galeri 2">
+      <img src="galeri3.jpg" class="w-full h-64 object-cover rounded-xl shadow-md" alt="Galeri 3">
     </div>
   </section>
 
   <!-- Kontak -->
-  <section class="py-16 px-6 bg-white text-center">
-    <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
-    <p class="mb-4">Alamat: Gg. Perjuangan No.602, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, DIY 55161</p>
-    <p class="mb-6">WhatsApp: <a href="https://wa.me/6282242023892" class="text-green-600 font-semibold">+62 822-4202-3892</a></p>
-    <iframe src="https://www.google.com/maps?q=Gg.+Perjuangan+No.602,+Pandeyan,+Umbulharjo,+Yogyakarta&output=embed" 
-            class="w-full h-64 rounded-xl shadow-lg"></iframe>
+  <section id="kontak" class="py-16 px-6 bg-gray-100">
+    <h3 class="text-3xl font-bold text-center mb-8">Kontak Kami</h3>
+    <div class="text-center">
+      <p class="mb-2">📍 Gg. Perjuangan No.602, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, 55161</p>
+      <p class="mb-2">📞 <a href="https://wa.me/6282242023892" class="text-green-600 font-semibold">+62 822-4202-3892</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/paketwisatajogja.id" target="_blank" class="text-blue-600">@paketwisatajogja.id</a></p>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-6 text-center">
-    <p>&copy; 2025 Jogja Tour Agency. All rights reserved.</p>
+    <p>&copy; 2025 Konco Dolan Jogja. All Rights Reserved.</p>
   </footer>
 
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
