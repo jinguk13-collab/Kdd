@@ -1,0 +1,28 @@
+/* style.css */
+
+/* Smooth scroll untuk semua link */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hover effect untuk paket/layanan */
+.bg-gray-100:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Button hover */
+a.bg-green-500:hover {
+  background-color: #16a34a;
+  transition: background-color 0.3s;
+}
+
+a.bg-yellow-500:hover {
+  background-color: #eab308;
+  transition: background-color 0.3s;
+}
+
+/* Footer font kecil */
+footer p {
+  font-size: 0.9rem;
+}
