@@ -1,33 +1,103 @@
-/* style.css */
-<!-- Video Melayang -->
-<video class="fixed bottom-5 right-5 w-72 rounded-xl shadow-lg z-50 hover:scale-105 transition-transform duration-300" autoplay muted loop>
-  <source src="videos/video.mp4" type="video/mp4">
-  Browser kamu tidak mendukung tag video.
-</video>
-
-/* Smooth scroll untuk semua link */
-html {
-  scroll-behavior: smooth;
+/* ======= Reset & Base ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Hover effect untuk paket/layanan */
-.bg-gray-100:hover {
+body {
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ======= Container ======= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* ======= Judul ======= */
+h1, h2, h3 {
+  color: #ff6f61;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ======= Paket Card ======= */
+.paket-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 1rem;
+}
+
+.paket-card:hover {
   transform: translateY(-5px);
-  transition: transform 0.3s ease;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
 
-/* Button hover */
-a.bg-green-500:hover {
-  background-color: #16a34a;
-  transition: background-color 0.3s;
+.paket-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s;
 }
 
-a.bg-yellow-500:hover {
-  background-color: #eab308;
-  transition: background-color 0.3s;
+.paket-card img:hover {
+  transform: scale(1.05);
 }
 
-/* Footer font kecil */
-footer p {
-  font-size: 0.9rem;
+.paket-card .content {
+  padding: 1rem 1.5rem;
+}
+
+.paket-card .content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.paket-card .content p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ======= Tombol ======= */
+.btn {
+  display: inline-block;
+  background: #ff6f61;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background: #ff3b2f;
+  transform: scale(1.05);
+}
+
+/* ======= Grid Layout ======= */
+.paket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* ======= Responsif ======= */
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  .paket-card img {
+    height: 180px;
+  }
 }
