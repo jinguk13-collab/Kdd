@@ -11,7 +11,18 @@ body {
   color: #333;
   line-height: 1.6;
 }
+/* Efek zoom halus untuk gambar paket */
+.paket-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
 
+.paket-card img:hover {
+  transform: scale(1.1); /* Zoom lebih besar */
+  filter: brightness(1.1); /* Biar sedikit lebih cerah saat hover */
+}
 /* ======= Container ======= */
 .container {
   width: 90%;
